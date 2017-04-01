@@ -2,7 +2,7 @@
 
   <h1>Request Information</h1>
   
-  <form name="myForm" ng-controller="Ctrl">
+  <form>
   
     <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">First Name:</label>
@@ -10,57 +10,61 @@
         <input class="form-control" type="text" ng-model="customer.firstname" />
       </div>
     </div>
+    
     <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Last Name:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.lastname" />
       </div>
     </div>
-     <div class="form-group row">
-      <label for="example-text-input" class="col-2 col-form-label"><form name="myForm" ng-controller="Ctrl">
-      E-mail:</label>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">E-mail:</label>
       <div class="col-10">
         <input name="myInput" class="form-control" type="email" ng-model="customer.email" />
-  
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Phone:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.phone" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Address:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.address" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">City:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.city" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Postal Code:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.postal" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Select a time frame:</label>
       <div class="col-10">
         <select ng-model="customer.timeframe">
-      <option>Within the hour</option>
-      <option>Anytime today</option>
-      <option>Tomorrow</option>
-    </select>
-    <div ng-controller="availabililtyController" > I'm a heading of Two</div>
-    <div ng-controller ="infoController" > I'm a heading of One</div>
-    <div ng-include src ="'partials/customerInfo.html'"></div>
-
-</body>
+          <option>Within the hour</option>
+          <option>Anytime today</option>
+          <option>Tomorrow</option>
+        </select>
       </div>
     </div>
     
+    <button type="button" class="btn btn-primary" ng-click="saveCustomerInfo(customer)">Confirm Request</button>
+    
+  </form>
+</div>

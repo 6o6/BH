@@ -16,10 +16,32 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller("infoController", function($scope) {
+var customerInfo = {
+  "name": "",
+  "email": "",
+  "phone": "",
+  "address": "",
+  "city": "",
+  "postal": "",
+  "timeframe": ""
+};
+
+app.controller("infoController", function($scope, $location) {
+  
+  $scope.saveCustomerInfo = function (customer) {
+    customerInfo.name = customer.firstname + " " + customer.lastname;
+    customerInfo.email = customer.email;
+    customerInfo.phone = customer.phone;
+    customerInfo.address = customer.address;
+    customerInfo.city = customer.city;
+    customerInfo.postal = customer.postal;
+    customerInfo.timeframe = customer.timeframe;
+    $location.path("/availability");
+  };
 });
 
 app.controller("availabilityController", function($scope) {
+  console.log("Name is: " + customerInfo.name);
 });
 
 app.controller("confirmController", function($scope) {
