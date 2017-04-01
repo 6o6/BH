@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-<center> <p style="font-size:48px;"> <font color="lightblue"> Estimate Waiting Time </font> </p> </center>
 
-<style type="text/css">
-   body { background: silver !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-</style>
+  <!DOCTYPE html>
+<html lang="en">
+<<div class="boxed">
+  <h1>Estimate Waiting Time <small></small></h1> 
+   
+</div>
 <style>
 p {
-  text-align: center;
+  
   font-size: 48px;
 }
 
@@ -48,19 +47,19 @@ var x = setInterval(function() {
 }, 1000);
 </script>
 
-<p style="font-size:34px;"> Select Other Avalible Time </p>
-<select> 
-  <option value="Monday">Monday</option>
-  <option value="Tuesday">Tuesday</option>
-  <option value="Wednesday">Wednesday</option>
-  <option value="Thursday">Thursday</option>
-  <option value="Friday">Friday</option>
-  
- 
-</select>
 
-
+ <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label"> <font size="6">Schedule an Appointment</font></label>
+      <div class="col-10">
+        
+        <select ng-model="customer.timeframe">
+      <option>Within the hour</option>
+      <option>Anytime today</option>
+      <option>Tomorrow</option>
+    </select>
+    
+      </div>
+    </div>
 
 </body>
 </html>
-
