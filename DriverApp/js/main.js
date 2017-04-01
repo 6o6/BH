@@ -6,9 +6,13 @@ app.config(function($routeProvider) {
         templateUrl: "partials/map.html",
         controller: "mapController"
     })
-    .when("/accept", {
-        templateUrl: "partials/acceptRequest.html",
-        controller: "acceptController"
+    .when("/measurements", {
+        templateUrl: "partials/measurements.html",
+        controller: "measurementsController"
+    })
+    .when("/recommendations", {
+        templateUrl: "partials/recommendations.html",
+        controller: "recommendationsController"
     });
 });
 
@@ -93,11 +97,14 @@ $http.post("https://api.routific.com/v1/vrp", queryParams, creds)
 
 });
 
-app.controller("acceptController", function($scope, $location) {
-  $scope.customerID = "#111111";
-  $scope.customerName = "Jane Doe";
-  $scope.customerAddress = "2222 Broadway St.";
-  $scope.customerPhone = "604-111-1111";
-  $scope.travelDistance = "3km";
-  $scope.timeFrame = "Within 3 hours";
+app.controller("measurementsController", function($scope, $location) {
+
+  $scope.searchItems = function () {
+    $location.path("/recommendations");
+  };
+
+});
+
+app.controller("recommendationsController", function($scope, $location) {
+
 });
