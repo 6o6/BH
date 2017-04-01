@@ -29,4 +29,17 @@ app.controller("confirmController", function($scope) {
   $scope.customerPhone = "604-111-1111";
   $scope.travelDistance = "3km";
   $scope.timeFrame = "Within 3 hours";
+  
+  var queryParams = {
+    "Name": "JC Ling",
+    "Email": "jjj@gmail.com"
+  };
+  
+  $http.put("https://bizhack-d6dde.firebaseio.com", queryParams)
+    .then(function (data) {
+      console.log(data.status);
+    }, function (error) {
+      console.log(error.toString());
+    });
+  });
 });

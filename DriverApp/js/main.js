@@ -70,4 +70,7 @@ app.controller("acceptController", function($scope, $location) {
   $scope.travelDistance = "3km";
   $scope.timeFrame = "Within 3 hours";
   
+  function acceptRequest() {
+    $location.path('/dimensions');
+  }
 });
