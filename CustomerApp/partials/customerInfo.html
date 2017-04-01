@@ -1,4 +1,5 @@
-<div id="customer-info-page" class="header-offset">
+
+<div id="customer-info-page">
 
   <h1>Request Information</h1>
   
@@ -10,19 +11,63 @@
         <input class="form-control" type="text" ng-model="customer.firstname" />
       </div>
     </div>
-    <label>Last Name: <input type="text" ng-model="customer.lastname" /></label> <br>
-    <label>E-mail: <input type="email" ng-model="customer.email" /></label> <br>
-    <label>Phone: <input type="text" ng-model="customer.phone" /></label> <br>
-    <label>Address: <input type="text" ng-model="customer.address" /></label> <br>
-    <label>City: <input type="text" ng-model="customer.city" /></label> <br>
-    <label>Postal Code: <input type="text" ng-model="customer.postal" /></label> <br>
-    <label>Select a time frame</label>
-    <select ng-model="customer.timeframe">
-      <option>Within the hour</option>
-      <option>Anytime today</option>
-      <option>Tomorrow</option>
-    </select>
-    <input type="submit" ng-click="update(customer)" value="Submit" />
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Last Name:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" ng-model="customer.lastname" />
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">E-mail:</label>
+      <div class="col-10">
+        <input name="myInput" class="form-control" type="email" ng-model="customer.email" />
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Phone:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" ng-model="customer.phone" />
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Address:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" ng-model="customer.address" />
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">City:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" ng-model="customer.city" />
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Postal Code:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" ng-model="customer.postal" />
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Select a time frame:</label>
+      <div class="col-10">
+        <select ng-model="customer.timeframe">
+
+          <option>Within the hour</option>
+          <option>Anytime today</option>
+          <option>Tomorrow</option>
+        </select>
+      </div>
+    </div>
+    
+    <button type="button" class="btn btn-primary" ng-click="saveCustomerInfo(customer)">Confirm Request</button>
+    
   </form>
-  
 </div>
+

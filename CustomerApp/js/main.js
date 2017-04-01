@@ -16,17 +16,42 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller("infoController", function($scope) {
+var customerInfo = {
+  "name": "",
+  "email": "",
+  "phone": "",
+  "address": "",
+  "timeframe": ""
+};
+
+app.controller("infoController", function($scope, $location) {
+  
+  $scope.saveCustomerInfo = function (customer) {
+    customerInfo.name = customer.firstname + " " + customer.lastname;
+    customerInfo.email = customer.email;
+    customerInfo.phone = customer.phone;
+    customerInfo.address = customer.address + ", " + customer.city + ", " + customer.postal;
+    customerInfo.timeframe = customer.timeframe;
+    $location.path("/availability");
+  };
 });
 
-app.controller("availabilityController", function($scope) {
+app.controller("availabilityController", function($scope, $location) {
+  $scope.saveCustomerInfo = function (customer) {
+  console.log("Name is: " + customerInfo.name);
+  $location.path("/confirm");
+};
 });
 
-app.controller("confirmController", function($scope) {
+app.controller("confirmController", function($scope, $location, $http) {
   $scope.customerID = "#111111";
-  $scope.customerName = "Jane Doe";
-  $scope.customerAddress = "2222 Broadway St.";
-  $scope.customerPhone = "604-111-1111";
-  $scope.travelDistance = "3km";
-  $scope.timeFrame = "Within 3 hours";
+  $scope.customerName = customerInfo.name;
+  $scope.customerAddress = customerInfo.address;
+  $scope.customerPhone = customerInfo.phone;
+  $scope.timeFrame = customerInfo.timeframe;
+  
+  var queryParams = {
+    "Name": "JC Ling",
+    "Email": "jjj@gmail.com"
+  };
 });

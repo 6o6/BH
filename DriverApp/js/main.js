@@ -1,4 +1,5 @@
 var app = angular.module("driverApp", ["ngRoute", "ngMap"]);
+
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -99,5 +100,4 @@ app.controller("acceptController", function($scope, $location) {
   $scope.customerPhone = "604-111-1111";
   $scope.travelDistance = "3km";
   $scope.timeFrame = "Within 3 hours";
-  
 });
