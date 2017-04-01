@@ -3,7 +3,7 @@
 
   <h1>Request Information</h1>
   
-  <form name="myForm" ng-controller="Ctrl">
+  <form>
   
     <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">First Name:</label>
@@ -11,72 +11,63 @@
         <input class="form-control" type="text" ng-model="customer.firstname" />
       </div>
     </div>
+    
     <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Last Name:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.lastname" />
       </div>
     </div>
-     <div class="form-group row">
-      <label for="example-text-input" class="col-2 col-form-label"><form name="myForm" ng-controller="Ctrl">
-      E-mail:</label>
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">E-mail:</label>
       <div class="col-10">
         <input name="myInput" class="form-control" type="email" ng-model="customer.email" />
-  
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Phone:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.phone" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Address:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.address" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">City:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.city" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Postal Code:</label>
       <div class="col-10">
         <input class="form-control" type="text" ng-model="customer.postal" />
       </div>
     </div>
- <div class="form-group row">
+    
+    <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Select a time frame:</label>
       <div class="col-10">
         <select ng-model="customer.timeframe">
-      <option>Within the hour</option>
-      <option>Anytime today</option>
-      <option>Tomorrow</option>
-    </select>
-    
+
+          <option>Within the hour</option>
+          <option>Anytime today</option>
+          <option>Tomorrow</option>
+        </select>
       </div>
     </div>
     
-
-
-<div ng-app="myMea" ng-controller="myCtrl">
-
-<button type="button"  ng-click="myFunc()">Submit</button>
-<a ng-href=./driverAvailability.html' ng-click="myFunc()" >click me</a>
-<script>
-angular.module('myMea', [])
-  .controller('myCtrl', ['$scope', function($scope) {
-    $scope.myFunc = function() {
-      window.location.href = './driverAvailability.html';
-    };
-  }]);
-</script>
+    <button type="button" class="btn btn-primary" ng-click="saveCustomerInfo(customer)">Confirm Request</button>
+    
+  </form>
 </div>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
