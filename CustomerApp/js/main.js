@@ -37,6 +37,10 @@ app.controller("infoController", function($scope, $location) {
 });
 
 app.controller("availabilityController", function($scope, $location) {
+  $scope.saveCustomerInfo = function (customer) {
+  console.log("Name is: " + customerInfo.name);
+  $location.path("/confirm");
+};
 });
 
 app.controller("confirmController", function($scope, $location, $http) {
