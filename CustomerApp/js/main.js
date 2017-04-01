@@ -1,4 +1,4 @@
-var app = angular.module("customerApp", ["ngRoute"]);
+var app = angular.module("customerApp", ["ngRoute", "ngMap"]);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -23,4 +23,10 @@ app.controller("availabilityController", function($scope) {
 });
 
 app.controller("confirmController", function($scope) {
+  $scope.customerID = "#111111";
+  $scope.customerName = "Jane Doe";
+  $scope.customerAddress = "2222 Broadway St.";
+  $scope.customerPhone = "604-111-1111";
+  $scope.travelDistance = "3km";
+  $scope.timeFrame = "Within 3 hours";
 });

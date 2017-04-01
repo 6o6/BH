@@ -88,3 +88,23 @@ header img
   max-width: 250px;
   margin: 10px auto;
 }
+
+#confirm-page
+{
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#confirm-page ng-map
+{
+  height: 200px;
+  margin: 20px auto;
+}
+
+#confirm-page p
+{
+  position: relative;
+  margin: 20px auto;
+}
