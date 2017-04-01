@@ -1,3 +1,66 @@
-<div>
-<h1>Driver Availability Page</h1>
-</div>
+<!DOCTYPE html>
+<html>
+<body>
+
+<center> <p style="font-size:48px;"> <font color="lightblue"> Estimate Waiting Time </font> </p> </center>
+
+<style type="text/css">
+   body { background: silver !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+<style>
+p {
+  text-align: center;
+  font-size: 48px;
+}
+
+</style>
+
+<body>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+<p style="font-size:34px;"> Select Other Avalible Time </p>
+<select> 
+  <option value="Monday">Monday</option>
+  <option value="Tuesday">Tuesday</option>
+  <option value="Wednesday">Wednesday</option>
+  <option value="Thursday">Thursday</option>
+  <option value="Friday">Friday</option>
+  
+ 
+</select>
+
+
+
+</body>
+</html>
+
