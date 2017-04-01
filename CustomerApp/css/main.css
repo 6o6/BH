@@ -33,7 +33,7 @@ header img
 .header-offset
 {
   position: relative;
-  margin-top: 50px;
+  margin: 50px auto 0 auto;
 }
 
 .btn-primary
@@ -44,13 +44,47 @@ header img
   font-weight: bold;
 }
 
+.btn-secondary
+{
+  background-color: #007fd8;
+  color: #fff;
+  border-color: #007fd8;
+  font-weight: bold;
+}
+
 #customer-info-page
 {
   position: relative;
-  margin: 0 auto;
   padding: 20px;
   width: 100%;
   max-width: 600px;
   height: 100%;
 }
 
+#availability-page 
+{
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+#availability-page p
+{
+  position: relative;
+  margin: 20px auto 10px auto;
+}
+
+#availability-page span
+{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#availability-page button
+{
+  width: 90%;
+  max-width: 250px;
+  margin: 10px auto;
+}
