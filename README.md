@@ -10,3 +10,7 @@ For Warren:
 > git commit -m "Comment"
 > git pull
 > git push
+
+For Ellie:
+> git add -A
+> git stash

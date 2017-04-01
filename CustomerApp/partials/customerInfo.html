@@ -1,4 +1,4 @@
-<div id="customer-info-page">
+<div id="customer-info-page" class="header-offset">
 
   <h1>Request Information</h1>
   
@@ -56,7 +56,10 @@
       <option>Anytime today</option>
       <option>Tomorrow</option>
     </select>
-    <a href="file:///Users/warrenchan/Desktop/github/BH/CustomerApp/partials/driverAvailability.html">Submit</a>
+    <div ng-controller="availabililtyController" > I'm a heading of Two</div>
+    <div ng-controller ="infoController" > I'm a heading of One</div>
+    <div ng-include src ="'partials/customerInfo.html'"></div>
+
 </body>
       </div>
     </div>
