@@ -104,15 +104,23 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-#driver-page-1 #map
+#accept-page
 {
-  position: relative; 
-  height: 500px; 
-  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 5px;
+}
+   
+#accept-page form
+{
+  line-height: 26px;
+  text-align: center;
 }
 
-
-
+#accept-page form button
+{
+  margin: 20px;
+}
 
 
 
