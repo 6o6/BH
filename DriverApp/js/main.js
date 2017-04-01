@@ -13,6 +13,7 @@ app.config(function($routeProvider) {
 });
 
 app.controller("mapController", function($scope) {
+
 });
 
 app.controller("acceptController", function($scope) {

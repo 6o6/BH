@@ -1,3 +1,17 @@
-<div>
-<h1>Test</h1>
+<div id="driver-page-1">
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          scrollwheel: false,
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwQHpeN7cecFRUlz4HrIW6dWarLzCE56U&callback=initMap"
+    async defer></script>
+
 </div>
