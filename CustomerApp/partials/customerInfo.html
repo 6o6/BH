@@ -1,3 +1,63 @@
-<div>
-<h1>Customer Info Page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Page Title</title>
+</head>
+<body>
+<style type="text/css">
+   body { background: lightblue !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+<center>
+<h1>Service</h1>
+<form action="/action_page.php" autocomplete="on">
+  First name:<input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <br>
+</form>
+<p> Address</p>
+<input type="text" name="Address">
+<p> City </p> 
+<input type="text" name="Address">
+<p> Province</p> 
+<input type="text" name="Address">
+<form action="/action_page.php">
+Select a time:
+<div class="container">
+   <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Time Avaliliable
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wednesday 1-5pm</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Thursday 1-5pm</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Friday 1-5pm</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" 
+href="#">Search Driver Nearby</a></li>
+    </ul>
+  </div>
+ 
 </div>
+ 
+</form>
+ <p>E-mail:</p>
+ <input type="email" name="email" autocomplete="off"><br>
+ <p>Phone Number</p>
+ <input type="text" name="Phone Number">
+<p>
+<a href="file:///Users/warrenchan/Desktop/github/BH/partials/customer/customerInfo%201.html">
+<input type="submit">
+</a>
+</p>
+
+
+
+
+</center>
+
+</body>
+</html>
+

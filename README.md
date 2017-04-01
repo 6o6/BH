@@ -5,3 +5,8 @@ For Joy:
 > Right click, select "Git Bash Here"
 > Type in "git pull"
  
+For Warren:
+> git add -A
+> git commit -m "Comment"
+> git pull
+> git push
