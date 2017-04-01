@@ -12,8 +12,8 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller("mapController", function($scope) {
-  
+app.controller("mapController", function($scope, $location, $http) {
+
 });
 
 app.controller("acceptController", function($scope, $location) {
