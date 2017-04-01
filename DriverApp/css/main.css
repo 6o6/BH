@@ -75,3 +75,9 @@ header img
   position: relative;
   margin: 20px auto;
 }
+
+#recommendations-page
+{
+  position: relative;
+  padding: 20px;
+}
