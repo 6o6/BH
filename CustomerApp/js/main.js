@@ -41,5 +41,5 @@ app.controller("confirmController", function($scope) {
     }, function (error) {
       console.log(error.toString());
     });
-  });
+
 });
