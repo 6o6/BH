@@ -1,4 +1,4 @@
-var app = angular.module("driverApp", ["ngRoute"]);
+var app = angular.module("driverApp", ["ngRoute", "ngMap"]);
 
 app.config(function($routeProvider) {
     $routeProvider
