@@ -60,3 +60,24 @@ header img
 {
   margin: 20px auto;
 }
+
+#measurements-page
+{
+  position: relative;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+#measurements-page form
+{
+  position: relative;
+  margin: 20px auto;
+}
+
+#recommendations-page
+{
+  position: relative;
+  padding: 20px;
+}
