@@ -2,16 +2,16 @@ var app = angular.module("customerApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider
-    .when("/info", {
-        templateUrl: "partials/customer/customerInfo.html",
+    .when("/", {
+        templateUrl: "partials/customerInfo.html",
         controller: "infoController"
     })
     .when("/availability", {
-        templateUrl: "partials/customer/driverAvailability.html",
+        templateUrl: "partials/driverAvailability.html",
         controller: "availabilityController"
     })
     .when("/confirm", {
-        templateUrl: "partials/customer/confirmRequest.html",
+        templateUrl: "partials/confirmRequest.html",
         controller: "confirmController"
     });
 });

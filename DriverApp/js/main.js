@@ -3,11 +3,11 @@ var app = angular.module("driverApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl: "partials/driver/map.html",
+        templateUrl: "partials/map.html",
         controller: "mapController"
     })
     .when("/confirm", {
-        templateUrl: "partials/driver/acceptRequest.html",
+        templateUrl: "partials/acceptRequest.html",
         controller: "acceptController"
     });
 });
