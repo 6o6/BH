@@ -1,7 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 html, body
 {
-  width: 100%;
+  position: relative;
   height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+header
+{
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #003b64;
+  text-align: center;
+}
+
+header img
+{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+}
+
+.header-offset
+{
+  position: relative;
+  margin-top: 50px;
+}
+
+.btn-primary
+{
+  background-color: #ffe000;
+  color: #2e3337;
+  border-color: #ffe000;
+  font-weight: bold;
 }
 
 #customer-info-page
