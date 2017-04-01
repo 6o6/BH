@@ -21,8 +21,6 @@ var customerInfo = {
   "email": "",
   "phone": "",
   "address": "",
-  "city": "",
-  "postal": "",
   "timeframe": ""
 };
 
@@ -32,36 +30,24 @@ app.controller("infoController", function($scope, $location) {
     customerInfo.name = customer.firstname + " " + customer.lastname;
     customerInfo.email = customer.email;
     customerInfo.phone = customer.phone;
-    customerInfo.address = customer.address;
-    customerInfo.city = customer.city;
-    customerInfo.postal = customer.postal;
+    customerInfo.address = customer.address + ", " + customer.city + ", " + customer.postal;
     customerInfo.timeframe = customer.timeframe;
     $location.path("/availability");
   };
 });
 
-app.controller("availabilityController", function($scope) {
-  console.log("Name is: " + customerInfo.name);
+app.controller("availabilityController", function($scope, $location) {
 });
 
-app.controller("confirmController", function($scope) {
+app.controller("confirmController", function($scope, $location, $http) {
   $scope.customerID = "#111111";
-  $scope.customerName = "Jane Doe";
-  $scope.customerAddress = "2222 Broadway St.";
-  $scope.customerPhone = "604-111-1111";
-  $scope.travelDistance = "3km";
-  $scope.timeFrame = "Within 3 hours";
+  $scope.customerName = customerInfo.name;
+  $scope.customerAddress = customerInfo.address;
+  $scope.customerPhone = customerInfo.phone;
+  $scope.timeFrame = customerInfo.timeframe;
   
   var queryParams = {
     "Name": "JC Ling",
     "Email": "jjj@gmail.com"
   };
-  
-  $http.put("https://bizhack-d6dde.firebaseio.com", queryParams)
-    .then(function (data) {
-      console.log(data.status);
-    }, function (error) {
-      console.log(error.toString());
-    });
-
 });
