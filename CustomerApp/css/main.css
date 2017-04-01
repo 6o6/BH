@@ -59,6 +59,7 @@ header img
   width: 100%;
   max-width: 500px;
   height: 100%;
+  text-align: center;
 }
 
 #customer-info-page form
@@ -66,6 +67,11 @@ header img
   position: relative;
   margin: 0 auto;
   width: 90%;
+}
+
+#customer-info-page form input
+{
+  text-align: center;
 }
 
 #customer-info-page button
