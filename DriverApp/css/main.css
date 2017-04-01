@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 html, body
 {
   position: relative;
   height: 100%;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
 }
 
 header
@@ -31,14 +34,12 @@ header img
   background-color: #ffe000;
   color: #2e3337;
   border-color: #ffe000;
-  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
 
 #accept-page
 {
   position: relative;
-  font-family: 'Open Sans', sans-serif;
   margin: 50px auto 0 auto;
   padding: 30px 5px;
 }
