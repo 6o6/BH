@@ -1,23 +1,28 @@
 <div class="header-offset">
-	<h1>Driver 2210</h1>
-	<h2>Name: John</h2>
-  <ng-map zoom="11" center="[49.266274,-123.102991]">
-    <!-- <marker position="[49.283799,-123.123909]" /> -->
-<!--         <directions
-          draggable="false"
-          panel="directions-panel"
-          travel-mode="DRIVING"
-          origin="[49.266274,-123.102991]"
-          destination="[49.283799,-123.123909]">
-        </directions>
-                <custom-marker id="start"
-          position="1135 Karamea-Kohaihai Rd, Kahurangi National Park, Tasman">
-          <div> Start Here </div>
-        </custom-marker>
-        <custom-marker id="end"
-          position="Pier St, Jackson Bay, West Coast, New Zeland">
-          <div> Ends Here </div>
-      </custom-marker> -->
+<div class="col-md-6" style="margin-top:50px">
+  <h2>Service Route - 2017/04/01</h2>
+    <table class="table table-striped">
+    <tr>
+      <th>Driver Name</th>
+      <th>John</th>
+    </tr>
+    <tr>
+      <td>Staff ID</td>
+      <td>123456</td>
+    </tr>
+    <tr>
+      <td>Shift start time</td>
+      <td>08:00</td>
+    </tr>
+    <tr>
+      <td>Shift end time</td>
+      <td>17:00</td>
+    </tr>
+    </table>
+</div> 
+<div class="col-md-12">
+      <div class="col-md-6" style="padding-left: 0px;">  
+        <ng-map zoom="11" center="[49.266274,-123.102991]">
         <directions 
           draggable="true"
           panel="directions-panel"
@@ -26,12 +31,66 @@
           origin="[49.266274,-123.102991]"
           destination="[49.266274,-123.102991]">
         </directions>
-<!--     <marker position="[49.270530,-123.134760]" />
-    <marker position="[49.259893,-123.146392]" /> 
-    <marker position="[49.238715,-123.102361]" />
-    <marker position="[49.261798,-123.232823]" />
-    <marker position="[49.284870,-123.132396]" />
-    <marker position="[49.228081,-123.068521]" /> -->
     <control name="overviewMap" opened="true" />
   </ng-map> 
+</div>
+  <div class="col-md-6" style="padding-left: 0px;padding-right: 0px;">
+    <table class="table table-striped" style="font-size:12px">
+    <tr>
+      <th>Address</th>
+      <th>Estimated Arrival Time</th>
+      <th>Time to Finish</th>
+      <th>Solved?</th>
+    </tr>
+    <tr>
+      <td>2122 Quebec St, Vancouver, BC V5T 1J6, Canada</td>
+      <td>09:00</td>
+      <td>30 minutes</td>
+      <td><button type="button" class="btn btn-sm btn-primary" ng-click="goToMeasurements()">Done</button></td>
+    </tr>
+    <tr>
+      <td>6168 Commercial St, Vancouver, BC V5P 3N9, Canada</td>
+      <td>10:00</td>
+      <td>30 minutes</td>
+            <td></td>
+
+    </tr>
+    <tr>
+      <td>1815-1823 W 13th Ave, Vancouver, BC V6J 2H4, Canada</td>
+      <td>10:50</td>
+      <td>30 minutes</td>
+            <td></td>
+
+    </tr>    
+    <tr>
+      <td>5488 Ortona Rd, Vancouver, BC V6T 1S2, Canada</td>
+      <td>13:00</td>
+      <td>30 minutes</td>
+            <td></td>
+
+    </tr>    
+    <tr>
+      <td>1075 Jervis St, Vancouver, BC V6E 2C2, Canada</td>
+      <td>14:00</td>
+      <td>30 minutes</td>
+            <td></td>
+
+    </tr>
+    <tr>
+      <td>1035-1039 Robson St, Vancouver, BC V6E 1A9, Canada</td>
+      <td>14:40</td>
+      <td>30 minutes</td>
+            <td></td>
+
+    </tr>
+    <tr>
+      <td>1540 Old Bridge St, Vancouver, BC V6H 3S5, Canada</td>
+      <td>15:30</td>
+      <td>30 minutes</td>
+            <td></td>
+
+    </tr>
+    </table>
+  </div>
+</div>
 </div>
