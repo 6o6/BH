@@ -1,4 +1,5 @@
-<div id="customer-info-page" class="header-offset">
+
+<div id="customer-info-page">
 
   <h1>Request Information</h1>
   
@@ -56,11 +57,24 @@
       <option>Anytime today</option>
       <option>Tomorrow</option>
     </select>
-    <div ng-controller="availabililtyController" > I'm a heading of Two</div>
-    <div ng-controller ="infoController" > I'm a heading of One</div>
-    <div ng-include src ="'partials/customerInfo.html'"></div>
-
-</body>
+    
       </div>
     </div>
     
+<a href="file:///Users/warrenchan/Desktop/github/BH/CustomerApp/partials/driverAvailability.html">Submit</a>
+
+
+<div ng-app="myMea" ng-controller="myCtrl">
+
+<button type="button" onclick="alert('Have you completed the measurement?')" ng-click="myFunc()">Submit</button>
+<script>
+angular.module('myMea', [])
+  .controller('myCtrl', ['$scope', function($scope) {
+    $scope.myFunc = function() {
+      window.location.href = './driverAvailability';
+    };
+  }]);
+</script>
+</div>
+
+
