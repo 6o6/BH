@@ -53,6 +53,8 @@ var queryParams = {
   }
 };
 
+
+
 // number of visits
 var numberofvisits = Object.keys(queryParams.visits).length;
   // $scope.arraystring = [];
@@ -94,6 +96,9 @@ $http.post("https://api.routific.com/v1/vrp", queryParams, creds)
           console.log(error.toString());
         });
 
+$scope.goToMeasurements = function () {
+  $location.path("/measurements");
+}
 
 });
 
