@@ -127,3 +127,16 @@ header img
   position: relative;
   margin: 20px auto;
 }
+
+#requested-page
+{
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+#requested-page span,
+#requested-page p
+{
+  margin: 10px auto;
+}

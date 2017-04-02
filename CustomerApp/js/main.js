@@ -13,6 +13,10 @@ app.config(function($routeProvider) {
     .when("/confirm", {
         templateUrl: "partials/confirmRequest.html",
         controller: "confirmController"
+    })
+    .when("/request", {
+        templateUrl: "partials/requested.html",
+        controller: "requestController"
     });
 });
 
@@ -50,8 +54,10 @@ app.controller("confirmController", function($scope, $location, $http) {
   $scope.customerPhone = customerInfo.phone;
   $scope.timeFrame = customerInfo.timeframe;
   
-  var queryParams = {
-    "Name": "JC Ling",
-    "Email": "jjj@gmail.com"
-  };
+  $scope.confirm = function () {
+    $location.path("/request");
+  }
+});
+
+app.controller("requestController", function($scope, $location) {
 });
